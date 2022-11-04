@@ -1,0 +1,52 @@
+
+html {
+    background-color: rgb(145, 145, 145);
+    color: white;
+}
+
+body{
+    background-color:  rgb(145, 145, 145);;
+}
+.collapser{
+    background-color: rgb(165, 165, 165);
+}
+.collapser:hover{
+    background-color: rgb(109, 109, 109);
+}
+.headerText { 
+    color: rgb(165, 165, 165); 
+}
+
+.headerText:hover { 
+    color: rgb(109, 109, 109); 
+}
+
+
+.cTitle {
+    color: rgb(165, 165, 165);
+    padding: 1%; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+}
+
+.main {
+    margin:.5%;
+    height:100vh;
+    background-color: rgb(145, 145, 145);
+}
+
+.cardBreak{
+    max-height: 50%;
+}
+.card{
+    min-height: 10vh;
+    background-color:  rgb(145, 145, 145);
+}
+.cDescription{
+   max-height: 350px;  
+   min-height: 350px;
+   padding: 1%;
+   color: rgb(255, 255, 255);
+   overflow: auto;
+}
