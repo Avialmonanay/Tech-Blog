@@ -1,0 +1,17 @@
+<div class="row main">
+    {{#each cards as |card|}}
+    <div class="col-12 col-sm-12 col-lg-12 col-xxl-6 cardBreak">
+        <div class="card" data-id="1">
+            <div class="cardInfo">
+                <div class="cTitle bg-dark">
+                    <h5>{{card.title}}</h5>
+                    <h6>{{card.posted}}</h6>
+                </div>
+                <p class="cDescription">{{card.description}}</p>
+                <a href="#" class="btn btn-primary cardBtn bg-dark"  data-id="{{card.id}}">Read More</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<script src="/scripts/homepage.js"></script>

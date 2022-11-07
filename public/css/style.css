@@ -28,6 +28,9 @@ body{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     width: 100%;
+    display: flex;
+    direction: row;
+    justify-content: space-between;
 }
 
 .main {
@@ -49,4 +52,9 @@ body{
    padding: 1%;
    color: rgb(255, 255, 255);
    overflow: auto;
+}
+
+.cardBtn {
+    width: 100%;
+    background-color: black;
 }
