@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" data-blogID="{{blog.id}}" data-blogCreator="{{blog.user_id}}" data-currentUser="{{userId}}">
 <div class="row main blog_page">
     <div class="col-12 cardBreak">
         <div class="card" data-id="1">
@@ -12,13 +12,18 @@
         </div>
     </div>
 </div>
-
+<div class="post-options">
+<button class="bg-dark btn btn-outline-success" id="post-edit-click" data-blog="{{blog.id}}" data-userId="{{userId}}" data-blogCreator="{{blog.user_id}}">Edit Post</button>
+</button>
+  <button id = "post-delete-click" class="btn bg-dark btn-outline-danger" data-blog="{{blog.id}}" data-userId="{{userId}}" data-blogCreator="{{blog.user_id}}">Delete Post</button>
+</button>
+</div>
   <div class="row mb-3">
     <div class="col">
       <textarea class="form-control" id="addComment" rows="1" placeholder="Add comment..."></textarea>
     </div>
     <div class="col">
-      <button class="btn btn-primary" id="commentSubmit" data-product="{{product.id}}" data-userId="{{userId}}" type="submit">Post</button>
+      <button class="btn bg-dark btn-outline-success" id="commentSubmit" data-blog="{{blog.id}}" data-userId="{{userId}}" type="submit">Post Comment</button>
     </div>
   </div>
 
@@ -27,11 +32,15 @@
     <div class="col-2"> 
       <h5>{{comment.username}}</h3>
     </div>
-    <div class="col-10">
+    <div class="col-9">
       <p>{{comment.comment}}</p>
+    </div>
+    <div class="col-1">
+      <button class="btn bg-dark btn-outline-danger d-flex justify-content-center commentDelete" data-blog="{{blog.id}}" data-commentID="{{comment.id}}">❌</button>
     </div>
   </div>
   {{/each}}
 </div>
 
-<script src="./scripts/comments.js"></script>
+<script src="/scripts/comments.js"></script>
+<script src="/scripts/blogs.js"></script>

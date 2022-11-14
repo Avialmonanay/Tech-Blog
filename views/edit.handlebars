@@ -4,15 +4,15 @@
       <form>
         <div class="mb-3">
           <label for="blogTitle" class="form-label">Blog Title</label>
-          <input type="text" class="form-control" id="blogTitle">
+          <textarea type="text" class="form-control" id="blogTitle">{{blog.title}}</textarea>
         </div>
         <div class="mb-3">
           <label for="blogContent" class="form-label">Blog Content</label>
-          <textarea type="text" class="form-control" id="blogContent"></textarea>
+          <textarea type="text" class="form-control" id="blogContent">{{blog.description}}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary" id="postSubmit" data-userid="{{userId}}">Submit</button>
+        <button type="submit" class="btn btn-primary" id="editSubmit" data-userid="{{userId}}" data-blogid="{{blog.id}}">Submit</button>
       </form>
     </div>
   </div>
 
-  <script src="/scripts/post.js"></script>
+  <script src="/scripts/edit.js"></script>

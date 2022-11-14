@@ -16,7 +16,7 @@ $('#postSubmit').click(async event => {
     
       if (response.ok) {
         console.log(response)
-        // location.replace(`/dashboard`);
+        location.replace(`/dashboard`);
       } else {
         alert('Failed to add post.');
       }
