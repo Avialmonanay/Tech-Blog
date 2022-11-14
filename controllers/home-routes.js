@@ -59,7 +59,7 @@ router.get('/', async (req, res) => {
 
   router.get('/post', withAuth, (req, res) => {
     if (req.session.loggedIn) {
-    res.render('post', { loggedIn: req.session.loggedIn });
+    res.render('post', { loggedIn: req.session.loggedIn, userId: req.session.userId});
       return;
     }
     res.redirect('/login');
@@ -67,7 +67,7 @@ router.get('/', async (req, res) => {
   })
 
 
-  router.get('/search/:title', async (req, res) => {
+  router.get('/search/:title', withAuth, async (req, res) => {
     try {
       
       const cardData = await Blogs.findAll({where:{title:{
@@ -80,7 +80,7 @@ router.get('/', async (req, res) => {
     }
   })
 
-  router.get('/dashboard', async (req, res) => {
+  router.get('/dashboard', withAuth, async (req, res) => {
     try {
       const userID = req.session.userId;
       const cardData = await Blogs.findAll({where:{user_id:userID}}).catch((err) => res.json(err));
