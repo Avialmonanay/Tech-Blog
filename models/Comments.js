@@ -24,11 +24,11 @@ Comments.init({
           key: 'id',
       },
     },
-    product_id:{
+    blog_id:{
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-          model:'product',
+          model:'blog',
           key: 'id',
       },
     },     

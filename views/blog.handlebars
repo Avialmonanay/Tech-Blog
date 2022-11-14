@@ -1,0 +1,37 @@
+<div class="container">
+<div class="row main blog_page">
+    <div class="col-12 cardBreak">
+        <div class="card" data-id="1">
+            <div class="cardInfo">
+                <div class="cTitle bg-dark">
+                    <h5>{{blog.title}}</h5>
+                    <h6>Written by: {{blog.username}} at {{blog.createdAt}}</h6>
+                </div>
+                <p class="cDescription">{{blog.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <textarea class="form-control" id="addComment" rows="1" placeholder="Add comment..."></textarea>
+    </div>
+    <div class="col">
+      <button class="btn btn-primary" id="commentSubmit" data-product="{{product.id}}" data-userId="{{userId}}" type="submit">Post</button>
+    </div>
+  </div>
+
+  {{#each comments as |comment|}}
+  <div class="row mb-3 border-bottom border-secondary border-opacity-50">
+    <div class="col-2"> 
+      <h5>{{comment.username}}</h3>
+    </div>
+    <div class="col-10">
+      <p>{{comment.comment}}</p>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+<script src="./scripts/comments.js"></script>
