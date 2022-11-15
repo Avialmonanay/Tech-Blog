@@ -52,17 +52,28 @@ This application uses Handlebars for HTML generation, bcrypt for password securi
 
 Full NPM featured list -   
  "dependencies": {
+ 
       "bcrypt": "^5.0.0",
+      
       "connect-session-sequelize": "^7.0.4",
+      
       "dotenv": "^8.2.0",
+      
       "express": "^4.17.1",
+      
       "express-handlebars": "^5.2.0",
+      
       "express-session": "^1.17.1",
+      
       "handlebars": "^4.7.6",
+      
       "mysql2": "^2.2.5",
+      
       "sequelize": "^6.3.5"
+      
     },
     "devDependencies": {
+    
       "nodemon": "^2.0.7"
     }
 
