@@ -49,6 +49,8 @@ Edit Page Example:
 ![tech_blog edit blog page](https://user-images.githubusercontent.com/108016215/201960920-0bc091cc-7bcb-41e6-aac1-106f96ab0ed6.png)
 
 ## Video Demo
+https://drive.google.com/file/d/1_ceAPxBsgvrolY4Yq0T7nfI_mQrL11Fs/view
+
 
 ## Contribution
 If you owuld like to contribute please contact the developer.
