@@ -20,7 +20,9 @@ $('#loginSubmit').click(async event => {
     });
   
     if (response.ok) {
-      location.replace('/');
+    console.log("hello")
+    setTimeout("console.log('Do not do this');", 1000)
+      location.replace('/dashboard');
     } else {
       alert('Failed to log in.');
     }

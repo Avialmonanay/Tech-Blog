@@ -21,7 +21,6 @@ body{
     color: rgb(68, 241, 0); 
 }
 
-
 .cTitle {
     color: rgb(165, 165, 165);
     padding: 1%; 
@@ -40,7 +39,9 @@ body{
 }
 
 .cardBreak{
+    min-height: 50%;
     max-height: 50%;
+    margin-bottom: 3%;
 }
 .card{
     min-height: 10vh;

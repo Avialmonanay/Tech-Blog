@@ -14,7 +14,7 @@ console.log(blog_id)
       
         if (response.ok) {
           console.log(response)
-        //   location.replace(`/dashboard`);
+          location.replace(`/dashboard`);
         } else {
           alert('Failed to edit post.');
         }
