@@ -18,26 +18,33 @@ This application uses a variety of NPM packages. That can be installed using the
 
 ## Usage
 When first accessing the site users will be directed to the homepage of the application that displays all blogs. The top navigation bar allows users to access their dashboard and the blog post page. Both will require user authentication before they can be accessed. 
+
 Homepage example: 
 ![tech_blog Homepage](https://user-images.githubusercontent.com/108016215/201960421-584d7ace-f8bf-4e9f-b190-d74b1b87bce7.PNG)
 
 
-Users will be able to create their own account where username and password are securly stored using bcrypt. 
+Users will be able to create their own account where username and password are securly stored using bcrypt.
+ 
 Login Page Example: 
 ![tech_blog login](https://user-images.githubusercontent.com/108016215/201960557-4489e60c-fb49-482f-99b4-f9287837a1a8.PNG)
 
 Users will also be able to use the search option to search for relevant blogs.
-Search Page Example: ![tech_blog search screen](https://user-images.githubusercontent.com/108016215/201960665-7d430a64-3178-4642-b689-78b1860d4545.PNG)
+
+Search Page Example:
+ ![tech_blog search screen](https://user-images.githubusercontent.com/108016215/201960665-7d430a64-3178-4642-b689-78b1860d4545.PNG)
 
 After logging in users will be presented with their dashboard showing them all blogs that they have created.
+
 Dashboard Example: 
 ![tech_blog dashboard](https://user-images.githubusercontent.com/108016215/201961113-7e1dbaef-c1de-4d65-8161-ea1129a06644.PNG)
 
- When opening up a blog users will be able to view the blog and leave a comment after authenticated. 
+ When opening up a blog users will be able to view the blog and leave a comment after authenticated.
+ 
 Blog Page Example: 
 ![tech_blog blog page](https://user-images.githubusercontent.com/108016215/201960777-09d01f22-17ec-445d-a7fc-e730832177f4.PNG)
 
-The owner of the blog will be able to edit the blog, delete the blog, and delete comments made by other users.
+The owner of the blog will be able to edit the blog, delete the blog, and delete comments made by other users. When selecting the Edit option the user will be redirected to a page similiar to the blog post page. However, it will autofill the title andblog for you with the current information from the blog.
+
 Edit Page Example: 
 ![tech_blog edit blog page](https://user-images.githubusercontent.com/108016215/201960920-0bc091cc-7bcb-41e6-aac1-106f96ab0ed6.png)
 
