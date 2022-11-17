@@ -1,3 +1,4 @@
+//logs the user into the application
 $('#loginSubmit').click(async event => {
     event.preventDefault();
   
@@ -28,6 +29,8 @@ $('#loginSubmit').click(async event => {
     }
   });
   
+
+  //adds user information to the DB and logs them in.
   $('#signUpSubmit').click(async event => {
     event.preventDefault();
   

@@ -1,3 +1,4 @@
+//Delete Button on the blogs page to delete the blog from the DB.
 $('#post-delete-click').click(async event => {
     event.preventDefault();
     const user_id = event.target.dataset.userid;
@@ -24,6 +25,7 @@ $('#post-delete-click').click(async event => {
 
 })
 
+//Edit Button on the blogs page to Edit the blog in the DB.
 $('#post-edit-click').click(async event => {
     event.preventDefault();
     const user_id = event.target.dataset.userid;

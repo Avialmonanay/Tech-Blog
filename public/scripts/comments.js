@@ -1,3 +1,4 @@
+//post comment Button on the blogs page to add a comment to the blog in the DB.
 $('#commentSubmit').click(async event => {
     event.preventDefault();
     const comment = $('#addComment').val().trim();
@@ -21,6 +22,7 @@ $('#commentSubmit').click(async event => {
     }
   });
 
+  //Delete Button on the blogs page to delete the comment from the blog in the DB.
   $('.commentDelete').click(async event => {
     event.preventDefault();
     

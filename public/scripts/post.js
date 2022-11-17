@@ -1,3 +1,4 @@
+//submit button on the post page to create a new blog.
 $('#postSubmit').click(async event => {
     event.preventDefault();
     const title = $('#blogTitle').val().trim();

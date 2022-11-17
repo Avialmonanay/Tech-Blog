@@ -1,3 +1,4 @@
+//submit button on the edit page to edit the blog in the DB
 $('#editSubmit').click(async event => {
     event.preventDefault();
     const title = $('#blogTitle').val().trim();
