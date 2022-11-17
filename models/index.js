@@ -2,7 +2,7 @@ const Users = require('./Users');
 const Comments = require('./Comments');
 const Blogs = require('./Blogs');
 
-
+//Model relationships to eachother. Links users to blogs, and comments, Links comments to blogs.
 Users.hasMany(Comments, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE',
