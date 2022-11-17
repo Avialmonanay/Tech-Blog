@@ -7,7 +7,6 @@ Tech Blog is a place for developers to write articles about different technical 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contribution](#contribution)
-- [Testing](#testing)
 - [Features](#features)
 - [Contact](#questions)
 
