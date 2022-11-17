@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Comments } = require('../../models');
 
+//route for creating a comment on a blog.
 router.post('/create', async (req, res) => {
     try {
         const dbCommentData = await Comments.create({
@@ -15,6 +16,7 @@ router.post('/create', async (req, res) => {
     }
 })
 
+//route for deleting a comment with the blog.
 router.delete('/destroy/:id', async (req, res) => {
     try {
         const dbDeleteCommentData = await Comments.destroy({ where: {id:req.params.id}})

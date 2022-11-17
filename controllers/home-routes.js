@@ -6,7 +6,7 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 
-
+//gets all blogs from the database renders the homepage.
 router.get('/', async (req, res) => {
     try {
       const cardData = await Blogs.findAll().catch((err) => res.json(err));
@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
     }
   })
 
+  //gets a specific blog, its comments, and the users that made said comments and renders the blog page.
   router.get('/blog/:id', async (req, res) => {
     try {
       // Get Blogs from the database
@@ -47,6 +48,7 @@ router.get('/', async (req, res) => {
     }
   });
 
+  //renders the login page. If the user is already logged in it will route to the homepage.
   router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
       res.redirect('/');
@@ -56,7 +58,7 @@ router.get('/', async (req, res) => {
     res.render('login', { loggedIn: req.session.loggedIn });
   });
 
-
+// renders the post page, if not logged in the user will be directed to the login page.
   router.get('/post', withAuth, (req, res) => {
     if (req.session.loggedIn) {
     res.render('post', { loggedIn: req.session.loggedIn, userId: req.session.userId});
@@ -66,7 +68,7 @@ router.get('/', async (req, res) => {
     
   })
 
-
+//searches the database for matching words in the title of the blog, renders the search page.
   router.get('/search/:title', withAuth, async (req, res) => {
     try {
       
@@ -80,6 +82,7 @@ router.get('/', async (req, res) => {
     }
   })
 
+  //gets all blogs for the logged in user and renders the search page showing them all of their posted blogs.
   router.get('/dashboard', withAuth, async (req, res) => {
     try {
       const userID = req.session.userId;

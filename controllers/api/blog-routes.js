@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Blogs } = require('../../models');
 
+// route used for creating a new blog
 router.post('/create', async (req, res) => {
     try {
       const dbPostData = await Blogs.create({
@@ -15,6 +16,7 @@ router.post('/create', async (req, res) => {
       }
     });
 
+//Deletes existing blogs
 router.delete('/destroy', async (req, res) => {
   try {
     const dbDeletePostData = await Blogs.destroy({ where: {id:req.body.blog_id}})
@@ -25,6 +27,7 @@ router.delete('/destroy', async (req, res) => {
   }
 })
 
+// allows you to edit an existing blog uses the edit handlebars for display.
 router.get('/edit/:id', async (req, res) => {
   console.log(req.session.userId)
   const blogData = await Blogs.findByPk(req.params.id).catch((err) => res.json(err));
@@ -33,6 +36,8 @@ router.get('/edit/:id', async (req, res) => {
 })
 module.exports = router;
 
+
+// put request for editing the blog that updates the SQL database.
 router.put('/edit', async (req, res) => {
   console.log(req.session.userId)
   await Blogs.update(
